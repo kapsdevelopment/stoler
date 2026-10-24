@@ -1,0 +1,13 @@
+{
+  "name": "stolleie-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Lokal, responsiv Stolleie-prototype uten backend eller eksterne avhengigheter.",
+  "scripts": {
+    "start": "node server.mjs",
+    "build": "node scripts/build-static.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check app.js"
+  }
+}

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html lang="no"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-background": "#251820", "tertiary-fixed-dim": "#ecbcaa", "on-primary-fixed": "#3c0223", "secondary-fixed": "#eedee3", "tertiary": "#543427", "on-tertiary-fixed-variant": "#603f31", "on-secondary": "#ffffff", "inverse-surface": "#3b2c35", "surface": "#fff8f9", "inverse-on-surface": "#ffecf5", "surface-container-low": "#fff0f6", "secondary-container": "#eedee3", "on-surface": "#251820", "on-tertiary": "#ffffff", "outline-variant": "#d6c1c7", "tertiary-fixed": "#ffdbce", "primary": "#652444", "background": "#fff8f9", "on-surface-variant": "#524348", "surface-container-high": "#fae2ee", "surface-dim": "#ebd4e0", "inverse-primary": "#ffb0d0", "surface-tint": "#8f4668", "error-container": "#ffdad6", "error": "#ba1a1a", "surface-variant": "#f4dce9", "primary-fixed": "#ffd8e6", "outline": "#847378", "on-primary-container": "#ffb0d0", "on-error": "#ffffff", "surface-container": "#ffe8f4", "primary-fixed-dim": "#ffb0d0", "primary-container": "#813b5c", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "on-primary-fixed-variant": "#732f50", "on-secondary-fixed-variant": "#4e4448", "surface-container-highest": "#f4dce9", "on-tertiary-container": "#ecbcaa", "on-secondary-fixed": "#21191d", "secondary-fixed-dim": "#d2c3c8", "tertiary-container": "#6e4a3c", "on-error-container": "#93000a", "on-tertiary-fixed": "#2e140a", "surface-bright": "#fff8f9", "on-secondary-container": "#6d6166", "secondary": "#675b60" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "margin-tablet": "2rem", "space-lg": "2rem", "margin": "1rem", "space-md": "1.25rem", "margin-desktop": "3.5rem", "gutter": "1.25rem", "space-xl": "3.25rem", "gutter-desktop": "2rem", "space-sm": "0.75rem", "space-xs": "0.375rem" }, "fontFamily": { "display-lg-mobile": ["Playfair Display"], "headline-lg": ["Playfair Display"], "label-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Playfair Display"], "display-lg": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "label-md": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, "fontSize": { "display-lg-mobile": ["2.25rem", { "lineHeight": "1.2", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg": ["2.5rem", { "lineHeight": "1.2", "letterSpacing": "-0.015em", "fontWeight": "500" }], "label-lg": ["0.9375rem", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-lg": ["1.125rem", { "lineHeight": "1.65", "fontWeight": "400" }], "headline-lg-mobile": ["1.85rem", { "lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "500" }], "display-lg": ["3.5rem", { "lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-sm": ["0.8125rem", { "lineHeight": "1.5", "fontWeight": "400" }], "headline-sm": ["1.375rem", { "lineHeight": "1.35", "fontWeight": "600" }], "label-md": ["0.8125rem", { "lineHeight": "1.35", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-md": ["1.875rem", { "lineHeight": "1.3", "fontWeight": "500" }], "body-md": ["0.9375rem", { "lineHeight": "1.6", "fontWeight": "400" }], "label-sm": ["0.6875rem", { "lineHeight": "1.3", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(129,59,92,0.05)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0 flex-1"><button aria-label="Tilbake" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary-container transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span></button><div class="flex flex-col truncate pl-1"><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Stolleie</span><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate leading-tight">Annonsedetaljer</h1></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Del annonse" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary-container transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">share</span></button><button aria-label="Lagre som favoritt" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary-container transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">favorite_border</span></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-32">
+<!-- Bildegalleri & Stemningsbanner -->
+<section class="relative w-full px-margin pt-space-xs">
+<div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-surface-container shadow-[0_4px_20px_-4px_rgba(129,59,92,0.08)]">
+<img class="w-full h-full object-cover" data-alt="Bright high-end Scandinavian wellness studio treatment cabin in Oslo, featuring an electric heated treatment bed with linen throws, a sleek ceramic washbasin with brass fixtures, soft warm sunlight filtering through linen curtains, warm oak shelving, potted eucalyptus, calming muted blush and cream palette, ultra-refined boutique editorial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMho1G3qathiRubTQYzioYNnMcqj7StexU2Nmd6sJpHsFm8YfE3SFGQJNUWPDdk9XbUjKM2bQJ35sHfPgfiB944FMbSlwXK2I81hKqndKnqrTj_Grpu8tQrldqnd2X1bphVLPgEX6TkK5j20K_wdNWq0kMoaM6_n6Zo1dvqDGcxK-9ZxTA93RBlQFvEVNgxTeCIq4VINfgGhH7i1s1NXfsHVwjCEm_LKjm_9_CDr4n6ilNAz01EZEm"/>
+<!-- Bildeindikator chip -->
+<div class="absolute bottom-3 right-3 bg-inverse-surface/75 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-inverse-on-surface">photo_library</span>
+<span class="font-label-sm text-label-sm text-inverse-on-surface tracking-wider">1 / 6</span>
+</div>
+<!-- Kategori tag -->
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary">spa</span>
+<span class="font-label-sm text-label-sm text-primary tracking-wide uppercase">Lukket Behandlingsrom</span>
+</div>
+</div>
+</section>
+<!-- Hovedinformasjon & Tittel -->
+<section class="px-margin mt-space-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Hegdehaugsveien 28, Frogner / Majorstuen, Oslo</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mt-0.5 leading-snug">
+      Eksklusivt behandlingsrom i rolig bakgård
+    </h2>
+<!-- Match med fagområder -->
+<div class="flex flex-col gap-1.5 mt-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Passer ideelt for:</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-3 py-1 bg-surface-container text-on-secondary-container rounded-full font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">clean_hands</span> Hudterapeut
+        </span>
+<span class="px-3 py-1 bg-surface-container text-on-secondary-container rounded-full font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">self_improvement</span> Massør
+        </span>
+<span class="px-3 py-1 bg-surface-container text-on-secondary-container rounded-full font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">auto_fix</span> Kosmetisk behandler
+        </span>
+<span class="px-3 py-1 bg-surface-container text-on-secondary-container rounded-full font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">visibility</span> Vippespesialist
+        </span>
+</div>
+</div>
+</section>
+<!-- Interaktiv Velger for Leieform -->
+<section class="px-margin mt-space-lg">
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-[0_6px_24px_-4px_rgba(129,59,92,0.06)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Velg leiemodell</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Skreddersy avtalen etter din praksis</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[24px]">real_estate_agent</span>
+</div>
+<!-- Faner / Radiokort -->
+<div class="grid grid-cols-1 gap-2.5 mt-1" id="rentModelSelector">
+<!-- 1. Fast leie (Aktiv som standard) -->
+<button class="w-full text-left p-3.5 rounded-DEFAULT transition-all duration-200 bg-surface-container-high text-on-surface shadow-sm" id="btn-fixed" onclick="selectRentalModel('fixed')" type="button">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" id="radio-icon-fixed" style="font-variation-settings: 'FILL' 1;">radio_button_checked</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">1. Fast leie</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-primary">8 500 kr <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/ mnd</span></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 pl-7">
+            Ubegrenset tilgang 24/7 med eget personlig nøkkelkort. Perfekt base for etablert praksis.
+          </p>
+</button>
+<!-- 2. Faste ukedager -->
+<button class="w-full text-left p-3.5 rounded-DEFAULT transition-all duration-200 bg-surface-container-low text-on-surface opacity-90" id="btn-days" onclick="selectRentalModel('days')" type="button">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]" id="radio-icon-days">radio_button_unchecked</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">2. Faste ukedager</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-primary">2 200 kr <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/ ukedag pr. mnd</span></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 pl-7">
+            Reserver faste faste dager ukentlig (f.eks. hver tirsdag og torsdag).
+          </p>
+</button>
+<!-- 3. Fleksibel leie -->
+<button class="w-full text-left p-3.5 rounded-DEFAULT transition-all duration-200 bg-surface-container-low text-on-surface opacity-90" id="btn-flex" onclick="selectRentalModel('flex')" type="button">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]" id="radio-icon-flex">radio_button_unchecked</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">3. Fleksibel leie</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-primary">750 kr <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/ dag</span></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 pl-7">
+            Bestill enkeltdager ved behov via månedlig kalender.
+          </p>
+</button>
+</div>
+<!-- Dynamisk innhold basert på valgt leieform -->
+<div class="mt-2 pt-2 bg-surface-container-low/60 rounded-DEFAULT p-3 flex flex-col gap-2" id="modelConfigArea">
+<div class="flex flex-col gap-1.5" id="config-fixed">
+<label class="font-label-sm text-label-sm text-on-surface-variant">ØNSKET OPPSTARTSDATO</label>
+<div class="flex items-center justify-between bg-surface-container-lowest px-3 py-2.5 rounded-DEFAULT">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span>
+<span class="font-label-md text-label-md text-on-surface">1. juni 2025</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Ledig fra dato</span>
+</div>
+</div>
+<div class="hidden flex flex-col gap-1.5" id="config-days">
+<label class="font-label-sm text-label-sm text-on-surface-variant">VELG FASTE UKEDAGER (MANDAG – SØNDAG)</label>
+<div class="grid grid-cols-7 gap-1 text-center font-label-sm text-label-sm">
+<button class="py-2 rounded-DEFAULT bg-primary text-on-primary font-medium" type="button">Ma</button>
+<button class="py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface" type="button">Ti</button>
+<button class="py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface" type="button">On</button>
+<button class="py-2 rounded-DEFAULT bg-primary text-on-primary font-medium" type="button">To</button>
+<button class="py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface" type="button">Fr</button>
+<button class="py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface-variant/50 cursor-not-allowed" type="button">Lø</button>
+<button class="py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface-variant/50 cursor-not-allowed" type="button">Sø</button>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-right">2 dager valgt: Mandag + Torsdag (4 400 kr/mnd)</span>
+</div>
+<div class="hidden flex flex-col gap-1.5" id="config-flex">
+<label class="font-label-sm text-label-sm text-on-surface-variant">LEDIGE DAGSVAKTER NESTE 14 DAGER</label>
+<div class="flex items-center gap-2 overflow-x-auto pb-1">
+<div class="flex-shrink-0 px-3 py-2 bg-primary text-on-primary rounded-DEFAULT text-center">
+<span class="block font-label-sm text-label-sm">Tir</span>
+<span class="font-label-lg text-label-lg font-bold">10. jun</span>
+</div>
+<div class="flex-shrink-0 px-3 py-2 bg-surface-container-lowest text-on-surface rounded-DEFAULT text-center">
+<span class="block font-label-sm text-label-sm">Ons</span>
+<span class="font-label-lg text-label-lg font-bold">11. jun</span>
+</div>
+<div class="flex-shrink-0 px-3 py-2 bg-surface-container-lowest text-on-surface rounded-DEFAULT text-center">
+<span class="block font-label-sm text-label-sm">Fre</span>
+<span class="font-label-lg text-label-lg font-bold">13. jun</span>
+</div>
+<div class="flex-shrink-0 px-3 py-2 bg-surface-container-lowest text-on-surface rounded-DEFAULT text-center">
+<span class="block font-label-sm text-label-sm">Lør</span>
+<span class="font-label-lg text-label-lg font-bold">14. jun</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Skatte- og vilkårsnotis -->
+<div class="flex flex-col gap-1 pt-2">
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Merverdiavgift</span>
+<span class="font-medium text-on-surface">Mva. kommer i tillegg (25%)</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Sikkerhetsstillelse</span>
+<span class="font-medium text-on-surface">Depositum: 2 måneders leie</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Om arbeidsplassen & atmosfære -->
+<section class="px-margin mt-space-lg flex flex-col gap-space-sm">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary tracking-wider uppercase font-semibold">Lokalet &amp; Rommet</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Skap en rolig oase for dine kunder</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Dette behandlingsrommet vender ut mot en stille, grønn bakgård skjermet fra Hegdehaugsveiens yrende byliv. Rommet nyter generøst med naturlig dagslys gjennom store vinduer med spesialtilpassede lysdempende lingardiner. 
+    </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Vegger og dører er bygget med ekstra akustisk lydisolering, slik at både samtaler og dype avspenningsbehandlinger forblir helt uforstyrret. Her kan du ønske dine faste og nye kunder velkommen i profesjonelle og estetisk gjennomførte omgivelser.
+    </p>
+<!-- Galleri forhåndsvisning / detaljer -->
+<div class="grid grid-cols-2 gap-2 mt-1">
+<div class="rounded-DEFAULT overflow-hidden bg-surface-container h-28">
+<img class="w-full h-full object-cover" data-alt="Modern ergonomic medical treatment chair in a bright warm beige salon cabin with brass wall lamp and oak shelves, minimalist Scandinavian boutique style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAne8lk6HXhGjRfhRRGrNfgDtVXtFp2nhnxIQNecNTgvKMTWSKWoiThje9r_mPX9Nu767VieNMkJe_sarmbZqY_D4GMjdBc_A0AHdpV0vqCz5bW6DRosKrhfVwXa8J-qmyp6dZpHC07Vkbcf1XR5RboaDD3umc4H_K28iP-c1MquVThfHG40tF-IQH_zElu2Fmf8ZallOOH6uq_tBAamd3vp7Uo7iw31fs5NF1I8jp2zzu8gZFS-UxT"/>
+</div>
+<div class="rounded-DEFAULT overflow-hidden bg-surface-container h-28">
+<img class="w-full h-full object-cover" data-alt="Warm welcoming client reception lounge area with soft linen armchairs, organic coffee bar, and warm lighting in a quiet boutique clinic Oslo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjATNVYEp_KF6Hn2uld-gemiK04KI6xfHBf9_jZIOnFUvHdQ2zkCP5VEpF3A0mJN3taySKuWX9hlmlsXMjgmT1SJTHnHSGh_B1WRLLcZxquv6P1OrsWeq2omZLx8WgDMRJSDhpDGVG23K6ttNC1rznSFF1ip1g_6kuslycwUYSd0pB3k-vgxvhOe-ge8AhsDmbanr1RoVngdhPMOokuhwr2PT9xp-rFytbSi6cEcfEIsFxvwkKuBys"/>
+</div>
+</div>
+</section>
+<!-- Hva som er inkludert & leietaker ordner selv -->
+<section class="px-margin mt-space-lg flex flex-col gap-space-md">
+<!-- Inkludert -->
+<div class="bg-surface-container rounded-lg p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface text-[1.2rem]">Inkludert i leien</h4>
+</div>
+<div class="grid grid-cols-1 gap-2.5">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[18px]">bed</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Elektrisk behandlingsbenk m/varme</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Fullt justerbar, stillegående motor og integrert varmematte.</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[18px]">water_drop</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Vask på rommet</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Designarmatur med umiddelbart varmt og kaldt vann for hygieniske krav.</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[18px]">local_laundry_service</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Håndkleservice &amp; vaskemaskin</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Fri bruk av felles Miele vask og tørk for klinikktekstiler.</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[18px]">coffee</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Kaffe &amp; te til ventende kunder</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Kvalitetste og Nespresso i et innbydende felles venterom.</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[18px]">wifi</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Trådløst fiberinternett &amp; alarm</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Raskt gjestenett, adgangskontroll og Verisure-alarmsystem.</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[18px]">sanitizer</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Rengjøring av fellesarealer</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ukentlig profesjonelt renhold av venterom, kundetoalett og tekjøkken.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Leietaker ordner selv -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[22px]">inventory_2</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface text-[1.2rem]">Hva leietaker ordner selv</h4>
+</div>
+<div class="grid grid-cols-1 gap-2">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">arrow_right</span>
+<span class="font-body-md text-body-md text-on-surface">Egne forbruksvarer, kremer, nåler og spesialutstyr</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">arrow_right</span>
+<span class="font-body-md text-body-md text-on-surface">Eget kassesystem, betalingsterminal eller Vipps Bedrift</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">arrow_right</span>
+<span class="font-body-md text-body-md text-on-surface">Egen bedrifts- og ansvarsforsikring</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Tilgangstider & Sentrale Vilkår -->
+<section class="px-margin mt-space-lg">
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-[0_4px_16px_-2px_rgba(129,59,92,0.05)] flex flex-col gap-3">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Tilgangstider &amp; leievilkår</h3>
+<div class="flex flex-col divide-y divide-transparent gap-3 mt-1">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">schedule</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Åpnings- og tilgangstider</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              07:00 – 22:00 alle dager (eller full tilgang 24/7 ved avtale om fast leie). Fleksibelt tilpasset morgentimer og kveldsavtaler.
+            </p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">event_repeat</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Oppsigelsestid</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Gjensidig oppsigelsestid på 2 måneder ved fast leiekontrakt, regnet fra utløpet av inneværende kalendermåned.
+            </p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">handshake</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Prøveperiode</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Mulighet for 1 måneds uforpliktende prøveperiode etter avtale med utleier før langsiktig kontrakt inngås.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Beliggenhet & Kart -->
+<section class="px-margin mt-space-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Beliggenhet</h3>
+<span class="font-label-sm text-label-sm text-primary font-medium">Bydel Frogner</span>
+</div>
+<div class="w-full h-44 rounded-lg bg-cover bg-center overflow-hidden relative shadow-sm" data-location="Hegdehaugsveien 28, Oslo, Norway" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB2qvD5Wu7D7L_Hics5axm07McP9vjQkPUHifrwyo8RZCOGsuP8Qt3Wlp9TAKkrIx7fVqiUDa6Xk3c0EPQV7a3yJEkU-AslMZjg4PtSMfqyLvyW3YSNCi1qiFrrXC6UBuYp2U4QXnskDstpP7hWqjUeaskBFQB3xF7W3NjLT2BerzugK8Bw8gIjZGQBVYJabxIwQPjilogqmoiIKrK3NN8j2wOOMFlZEfO9WUiDvQoPlYzhYUmAT4jX')">
+<div class="absolute bottom-2.5 left-2.5 bg-surface/90 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[16px]">pin_drop</span>
+<span class="font-label-sm text-label-sm text-on-surface">Hegdehaugsveien 28 (Trikk 19 &amp; 11)</span>
+</div>
+</div>
+</section>
+<!-- Informasjon om Utleier -->
+<section class="px-margin mt-space-lg mb-4">
+<div class="bg-surface-container rounded-lg p-space-md flex flex-col gap-3">
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase font-semibold">Om verten</span>
+<div class="flex items-center gap-3">
+<div class="relative w-14 h-14 rounded-full overflow-hidden bg-surface-container-highest flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait of Cecilie, a warm and professional Norwegian female salon director and certified skin therapist, wearing elegant neutral linen work attire, soft daylight studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRfNuHZJgunxGhchRi7xLI8LmR9X6PYjgP0epYpFv3dUBNCnurY2mz7pzSiftSRxTL91hrUhkb87YPFuo__dfi9jnMMfEylll3gimdWN9YhZ6_JM53JFeiL3lPRkB-WxlTLz6OAdc04pYlSp69i5g513JTLYm2HsMtuVxUxTt6-m07FD8AQiR2h37aLK2DPc_hyzcCraFDAgXu2S7lx77vcEbWaKp2WN1SSHy0QRbiQo-3J5177sIu"/>
+<div class="absolute bottom-0 right-0 w-4 h-4 bg-primary text-on-primary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px]">check</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface truncate">Cecilie V.</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Daglig leder &amp; autorisert hudpleier</span>
+<span class="font-label-sm text-label-sm text-primary font-medium truncate mt-0.5">Atelier Hegdehaugsveien AS</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">bolt</span>
+<span>Svarer vanligvis innen 2 timer</span>
+</div>
+</div>
+</section>
+<!-- Fast Bunnlinje (Sticky Mobile CTA Bar) -->
+<aside class="fixed bottom-0 left-0 right-0 z-40 bg-surface/90 backdrop-blur-xl px-margin py-3 pb-safe shadow-[0_-4px_24px_rgba(81,37,58,0.12)]">
+<div class="max-w-md mx-auto flex flex-col gap-2">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" id="stickyPlanLabel">Fast leie</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold" id="stickyPriceLabel">8 500 kr</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="stickyPeriodLabel">/ mnd (eks. mva)</span>
+</div>
+</div>
+<button class="flex-shrink-0 h-12 px-6 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold hover:opacity-95 active:scale-95 transition-all shadow-[0_8px_20px_-4px_rgba(129,59,92,0.35)] flex items-center justify-center gap-2" type="button">
+<span>Send forespørsel</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="flex items-center justify-center gap-1.5 text-center">
+<span class="material-symbols-outlined text-[14px] text-primary">verified_user</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[0.75rem]">Uforpliktende – leieavtale inngås direkte med utleier</span>
+</div>
+</div>
+</aside>
+</div>
+<script>
+  function selectRentalModel(type) {
+    const btnFixed = document.getElementById('btn-fixed');
+    const btnDays = document.getElementById('btn-days');
+    const btnFlex = document.getElementById('btn-flex');
+
+    const radioFixed = document.getElementById('radio-icon-fixed');
+    const radioDays = document.getElementById('radio-icon-days');
+    const radioFlex = document.getElementById('radio-icon-flex');
+
+    const configFixed = document.getElementById('config-fixed');
+    const configDays = document.getElementById('config-days');
+    const configFlex = document.getElementById('config-flex');
+
+    const stickyPlan = document.getElementById('stickyPlanLabel');
+    const stickyPrice = document.getElementById('stickyPriceLabel');
+    const stickyPeriod = document.getElementById('stickyPeriodLabel');
+
+    // Reset all buttons to inactive styling
+    [btnFixed, btnDays, btnFlex].forEach(btn => {
+      btn.className = "w-full text-left p-3.5 rounded-DEFAULT transition-all duration-200 bg-surface-container-low text-on-surface opacity-90";
+    });
+
+    radioFixed.textContent = "radio_button_unchecked";
+    radioFixed.style.fontVariationSettings = "'FILL' 0";
+    radioFixed.className = "material-symbols-outlined text-on-surface-variant text-[20px]";
+
+    radioDays.textContent = "radio_button_unchecked";
+    radioDays.style.fontVariationSettings = "'FILL' 0";
+    radioDays.className = "material-symbols-outlined text-on-surface-variant text-[20px]";
+
+    radioFlex.textContent = "radio_button_unchecked";
+    radioFlex.style.fontVariationSettings = "'FILL' 0";
+    radioFlex.className = "material-symbols-outlined text-on-surface-variant text-[20px]";
+
+    configFixed.classList.add('hidden');
+    configDays.classList.add('hidden');
+    configFlex.classList.add('hidden');
+
+    // Activate the chosen model
+    if (type === 'fixed') {
+      btnFixed.className = "w-full text-left p-3.5 rounded-DEFAULT transition-all duration-200 bg-surface-container-high text-on-surface shadow-sm";
+      radioFixed.textContent = "radio_button_checked";
+      radioFixed.style.fontVariationSettings = "'FILL' 1";
+      radioFixed.className = "material-symbols-outlined text-primary text-[20px]";
+      configFixed.classList.remove('hidden');
+
+      stickyPlan.textContent = "Fast leie";
+      stickyPrice.textContent = "8 500 kr";
+      stickyPeriod.textContent = "/ mnd (eks. mva)";
+    } else if (type === 'days') {
+      btnDays.className = "w-full text-left p-3.5 rounded-DEFAULT transition-all duration-200 bg-surface-container-high text-on-surface shadow-sm";
+      radioDays.textContent = "radio_button_checked";
+      radioDays.style.fontVariationSettings = "'FILL' 1";
+      radioDays.className = "material-symbols-outlined text-primary text-[20px]";
+      configDays.classList.remove('hidden');
+
+      stickyPlan.textContent = "Faste ukedager (2 dager)";
+      stickyPrice.textContent = "4 400 kr";
+      stickyPeriod.textContent = "/ mnd (eks. mva)";
+    } else if (type === 'flex') {
+      btnFlex.className = "w-full text-left p-3.5 rounded-DEFAULT transition-all duration-200 bg-surface-container-high text-on-surface shadow-sm";
+      radioFlex.textContent = "radio_button_checked";
+      radioFlex.style.fontVariationSettings = "'FILL' 1";
+      radioFlex.className = "material-symbols-outlined text-primary text-[20px]";
+      configFlex.classList.remove('hidden');
+
+      stickyPlan.textContent = "Fleksibel leie";
+      stickyPrice.textContent = "750 kr";
+      stickyPeriod.textContent = "/ dag (eks. mva)";
+    }
+  }
+</script></main></body></html>
